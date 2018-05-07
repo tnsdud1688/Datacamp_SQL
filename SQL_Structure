@@ -1,0 +1,34 @@
+select name
+from people
+
+select title, release_year, country
+from films
+
+select distinct role
+from roles
+
+select count(distinct(country))
+from films
+
+select count(*)
+from films
+where release_year < 2000;
+
+select title, release_year
+from films
+where release_year > 2000;
+
+select name, birthdate
+from people
+where birthdate = '1974-11-11'
+
+select *
+from films
+where language = 'Spanish'
+AND release_year > '2000' and release_year < '2010'
+
+SELECT title, release_year
+FROM films
+WHERE (release_year >= 1990 AND release_year < 2000)
+AND (language = 'French' OR language = 'Spanish')
+AND gross > 2000000;

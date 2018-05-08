@@ -39,3 +39,26 @@ WHERE release_year BETWEEN 1990 AND 2000
 AND budget > 100000000
 AND (language = 'Spanish' or language = 'French');
 
+select title, release_year
+from films
+where release_year IN (1990, 2000)
+and duration > 120
+
+select count(*)
+from films
+where language IS NULL
+
+select name
+from people
+where name NOT Like 'A%'
+
+select MAX(duration)
+from films
+
+Select MIN(gross)
+from films
+
+Select MAX(gross)
+from films
+where release_year between 1994 AND 2012
+

@@ -62,3 +62,14 @@ Select MAX(gross)
 from films
 where release_year between 1994 AND 2012
 
+select title, (gross-budget) AS net_profit
+from films
+
+select AVG(duration/60.0) AS avg_duration_hours
+from films
+
+select count(deathdate)*100.0/count(*) AS percentage_dead
+from people
+
+select (MAX(release_year) - MIN(release_year))/10.0 AS number_of_decades
+from films

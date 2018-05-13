@@ -32,3 +32,10 @@ select release_year
 from films
 group by release_year
 Having Count(title) > 200
+
+select release_year, avg(budget) as avg_budget, avg(gross) as avg_gross
+from films
+where release_year > 1990
+group by release_year
+Having avg(budget) > 60000000
+Order by avg(gross) DESC
